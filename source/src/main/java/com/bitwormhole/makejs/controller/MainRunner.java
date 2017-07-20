@@ -1,20 +1,23 @@
 package com.bitwormhole.makejs.controller;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.bitwormhole.makejs.context.MjContext;
 import com.bitwormhole.makejs.model.MjPOM;
 import com.bitwormhole.makejs.utils.ContextBuilder;
+import com.bitwormhole.makejs.utils.LogTools;
 import com.bitwormhole.makejs.utils.PomBuilder;
 
 public class MainRunner implements IRunner, Runnable {
 
-	final static Logger log = Logger.getLogger(MainRunner.class);
+	final static Logger log = LogManager.getLogger();
 
 	private String[] param;
 
 	public MainRunner(String[] args) {
 		this.param = args;
+		LogTools.logList("args", args);
 	}
 
 	@Override

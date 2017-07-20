@@ -42,4 +42,11 @@ public class LogTools {
 
 	}
 
+	public static void logList(String tag, String[] args) {
+		System.out.println(tag);
+		for (String v : args) {
+			System.out.println("  " + v);
+		}
+	}
+
 }

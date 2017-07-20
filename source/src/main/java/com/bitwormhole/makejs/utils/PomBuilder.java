@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.bitwormhole.makejs.context.MjContext;
 import com.bitwormhole.makejs.model.MakeScript;
@@ -14,7 +14,7 @@ import com.bitwormhole.makejs.model.MjPOM;
 
 public class PomBuilder {
 
-	final static Logger log = LogManager.getLogger(PomBuilder.class);
+	final static Logger log = LogManager.getLogger();
 
 	/***********************
 	 * create a root pom
